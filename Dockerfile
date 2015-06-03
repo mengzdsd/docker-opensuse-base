@@ -6,5 +6,6 @@ MAINTAINER Mengz You <you.mengz@yahoo.com>
 RUN zypper -qn --gpg-auto-import-keys ref \
   && zypper -qn up --no-recommends \
   && echo 'TIMEZONE="Asia/Chongqing"' > /etc/sysconfig/clock \
-  && zypper -qn in --no-recommends timezone
+  && zypper -qn in --no-recommends timezone \
+  && zypper clean -a
 
